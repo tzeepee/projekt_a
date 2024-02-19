@@ -4,18 +4,6 @@ function preload() {
   table = loadTable('schau_fil_beziehung.csv', 'csv', 'header');
 }
 
-let data = [];
-
-function setup() {
-  for (let row of table.rows) {
-    let actor_id = row.get('schauspieler_id');
-    let actor_name = row.get('schauspieler_name');
-    let movie_id = row.get('film_id');
-    let movie_name = row.get('film_name');
-    data.push({actor_id, actor_name, movie_id, movie_name});
-  }
-}
-
 let actors = {};
 let movies = {};
 
